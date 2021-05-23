@@ -1,0 +1,13 @@
+[user]
+  name = sobadon
+  email = sbdn@chasoba.net
+
+[merge]
+  ff = false
+
+[pull]
+  ff = only
+
+[core]
+  editor = vim
+
