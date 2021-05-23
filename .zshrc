@@ -168,15 +168,3 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
-zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-
-# echo "$SSH_AUTH_SOCK"
-# if [ -z "$SSH_AUTH_SOCK" ] ; then
-#     eval `ssh-agent -s`
-#     ssh-add
-# fi
-
-if test "$SSH_AUTH_SOCK" ; then
-  ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
-fi
-
