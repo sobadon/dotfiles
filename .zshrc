@@ -66,6 +66,9 @@ alias sudo='sudo '
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 
+# nvim
+alias vim='nvim'
+
 # === completion ===
 # ! でロード完了文字を非表示に
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
