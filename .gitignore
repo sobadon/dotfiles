@@ -11,7 +11,7 @@
 !.ssh/rc
 !.config/git/config
 !.config/git/ignore
-!.config/nvim/
+!.config/nvim/*
 !.config/fish/fish_plugins
 !.config/fish/config.fish
 
