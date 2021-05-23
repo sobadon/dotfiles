@@ -14,5 +14,5 @@
 !.config/nvim/*
 !.config/fish/fish_plugins
 !.config/fish/config.fish
-
+!.config/zsh/abbreviations
 

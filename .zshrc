@@ -66,27 +66,6 @@ alias sudo='sudo '
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 
-# === abbr ===
-zinit light olets/zsh-abbr
-
-abbr k='kubectl' --quiet
-
-abbr initvim='vim ~/.config/nvim/init.vim' --quiet
-abbr dein='vim ~/.config/nvim/dein.toml' --quiet
-abbr deinlazy='vim ~/.config/nvim/dein_lazy.toml' --quiet
-
-abbr gs='git status' --quiet
-abbr ga='git add' --quiet
-abbr gap='git add -p' --quiet
-abbr gc='git commit' --quiet
-abbr gd='git diff' --quiet
-abbr gds='git diff --staged' --quiet
-
-abbr zshreload='source ~/.zshrc' --quiet
-
-abbr sshbackup='/home/sbdn/ghq/github.com/sobadon/backup-script/wsl/backup-ssh-config.sh backup' --quiet
-abbr sshrestore='/home/sbdn/ghq/github.com/sobadon/backup-script/wsl/backup-ssh-config.sh restore' --quiet
-
 # === completion ===
 # ! でロード完了文字を非表示に
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
@@ -180,4 +159,4 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-
+zinit light olets/zsh-abbr
