@@ -155,6 +155,9 @@ function peco-cdr () {
 zle -N peco-cdr
 bindkey '^G' peco-cdr
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # === theme ===
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
