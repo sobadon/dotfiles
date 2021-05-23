@@ -4,7 +4,7 @@
 
 !.gitignore
 !.tmux.conf
-!.install.sh
+!install.sh
 !.bashrc
 !.zshrc
 !.vimrc
