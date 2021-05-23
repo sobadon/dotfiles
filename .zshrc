@@ -94,7 +94,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-bindkey -M menuselect '^[[Z' reverse-menu-complete
+bindkey '^[[Z' reverse-menu-complete
 
 # kubectl
 source <(kubectl completion zsh)
