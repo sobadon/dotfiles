@@ -168,3 +168,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
+# === anyenv ===
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# install anyenv
+git clone https://github.com/anyenv/anyenv ${HOME}/.anyenv
+${HOME}/.anyenv/bin/anyenv init
+# anyenv install --init
+
 # install dein.vim
 mkdir -p ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
