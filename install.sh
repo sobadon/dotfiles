@@ -29,6 +29,6 @@ ln -snfv ${DOT_DIR}/.tmux.conf ~/.tmux.conf
 ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
 ln -snfv ${DOT_DIR}/.vimrc ~/.vimrc
-ln -snfv ${DOT_DIR}/.profile ~/.zprofile
+ln -snfv ${DOT_DIR}/.zprofile ~/.zprofile
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
 
