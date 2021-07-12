@@ -102,6 +102,9 @@ source <(kubectl completion zsh)
 # helm
 source <(helm completion zsh)
 
+# krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 # === setopt ===
 # 日本語ファイル名
 setopt print_eight_bit
