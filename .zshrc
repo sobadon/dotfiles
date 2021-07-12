@@ -99,6 +99,9 @@ bindkey '^[[Z' reverse-menu-complete
 # kubectl
 source <(kubectl completion zsh)
 
+# helm
+source <(helm completion zsh)
+
 # === setopt ===
 # 日本語ファイル名
 setopt print_eight_bit
