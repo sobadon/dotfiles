@@ -53,7 +53,6 @@ endif
 " let g:indent_guides_enable_on_vim_startup = 1
 
 nnoremap <silent> fzf :Files<CR>
-nnoremap <silent> ls :Buffers<CR>
 
 "dein Scripts-----------------------------
 if &compatible
