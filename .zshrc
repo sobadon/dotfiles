@@ -177,3 +177,6 @@ zinit light olets/zsh-abbr
 # === anyenv ===
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# === go ===
+export PATH=$PATH:/usr/local/go/bin
