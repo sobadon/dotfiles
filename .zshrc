@@ -32,6 +32,9 @@ setopt hist_reduce_blanks
 
 setopt histignorealldups sharehistory
 
+# 行頭がスペースのコマンドは history に残さない
+setopt HIST_IGNORE_SPACE
+
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
