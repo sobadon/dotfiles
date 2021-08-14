@@ -47,7 +47,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 # Ctrl + W のときにディレクトリ1階層だけ削除とかをするために
 autoload -Uz select-word-style
 select-word-style default
-zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-chars " /=;@:{},|."
 zstyle ':zle:*' word-style unspecified
 
 # === alias ====
