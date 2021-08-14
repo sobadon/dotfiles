@@ -30,7 +30,7 @@ setopt inc_append_history
 setopt share_history
 setopt hist_reduce_blanks
 
-setopt histignorealldups sharehistory
+setopt histignorealldups
 
 # 行頭がスペースのコマンドは history に残さない
 setopt HIST_IGNORE_SPACE
