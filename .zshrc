@@ -186,7 +186,9 @@ export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
 # === go ===
+export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
 
 if [[ `uname -a` == *WSL2* ]]; then
   # https://github.com/BlackReloaded/wsl2-ssh-pageant
