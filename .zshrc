@@ -104,10 +104,14 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 bindkey '^[[Z' reverse-menu-complete
 
 # kubectl
-source <(kubectl completion zsh)
+if type kubectl > /dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # helm
-source <(helm completion zsh)
+if type helm > /dev/null; then
+  source <(helm completion zsh)
+fi
 
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
