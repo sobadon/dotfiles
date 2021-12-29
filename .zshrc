@@ -73,9 +73,6 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 # nvim
 alias vim='nvim'
 
-# ~/.ssh/config
-alias sshconfig='/home/sbdn/ghq/github.com/sobadon/backup-script/wsl/backup-ssh-config.sh restore && vim ~/.ssh/config && /home/sbdn/ghq/github.com/sobadon/backup-script/wsl/backup-ssh-config.sh backup'
-
 # === completion ===
 # ! でロード完了文字を非表示に
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
