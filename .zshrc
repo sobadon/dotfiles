@@ -175,6 +175,7 @@ bindkey "^[[1;5D" backward-word
 # === theme ===
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
+PURE_PROMPT_SYMBOL=$
 
 # === plugin ===
 zinit light zsh-users/zsh-syntax-highlighting
