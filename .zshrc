@@ -192,6 +192,11 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
+# direnv
+if type direnv > /dev/null; then
+  eval "$(direnv hook zsh)"
+fi
+
 if [[ `uname -a` == *WSL2* ]]; then
   # https://github.com/BlackReloaded/wsl2-ssh-pageant
   # === SSH ===
