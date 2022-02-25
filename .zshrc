@@ -225,3 +225,5 @@ if [[ `uname -a` == *WSL2* ]]; then
     unset wsl2_ssh_pageant_bin
   fi
 fi
+
+if [ -e /home/sbdn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbdn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
