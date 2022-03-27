@@ -227,3 +227,6 @@ if [[ `uname -a` == *WSL2* ]]; then
 fi
 
 if [ -e /home/sbdn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbdn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/nomad nomad
