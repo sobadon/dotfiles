@@ -230,3 +230,5 @@ if [ -e /home/sbdn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbdn/.nix-p
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/nomad nomad
+
+complete -o nospace -C /usr/local/bin/vault vault
