@@ -5,7 +5,7 @@ set -o pipefail
 
 # install peco
 PECO_VERSION=v0.5.10
-wget --directory-prefix=~ https://github.com/peco/peco/releases/download/${PECO_VERSION}/peco_linux_amd64.tar.gz
+wget https://github.com/peco/peco/releases/download/${PECO_VERSION}/peco_linux_amd64.tar.gz
 tar xzvf peco_linux_amd64.tar.gz peco_linux_amd64/peco
 mv peco_linux_amd64/peco ~/.local/bin/
 rm -rf peco_linux_amd64.tar.gz peco_linux_amd64
