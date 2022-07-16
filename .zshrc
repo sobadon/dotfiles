@@ -58,11 +58,10 @@ alias ll='ls -alh --color=auto'
 # history timestamp
 alias h='fc -lt '%F %T' 1'
 
-# i option: 実行前にユーザー確認
 # v option: 進捗表示
-alias rm='rm -iv'
-alias cp='cp -iv'
-alias mv='mv -iv'
+alias rm='rm -v'
+alias cp='cp -v'
+alias mv='mv -v'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
