@@ -5,6 +5,7 @@
 !.gitignore
 !.tmux.conf
 !install.sh
+!install_small.sh
 !.bashrc
 !.zshrc
 !.vimrc
@@ -15,3 +16,4 @@
 !.config/fish/fish_plugins
 !.config/fish/config.fish
 !.config/zsh/abbreviations
+!.small/.zshrc
