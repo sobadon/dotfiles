@@ -7,7 +7,6 @@
 !install.sh
 !.bashrc
 !.zshrc
-!.zprofile
 !.vimrc
 !.ssh/rc
 !.config/git/config
@@ -16,4 +15,3 @@
 !.config/fish/fish_plugins
 !.config/fish/config.fish
 !.config/zsh/abbreviations
-

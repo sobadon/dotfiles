@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# install anyenv
-git clone https://github.com/anyenv/anyenv ${HOME}/.anyenv
-${HOME}/.anyenv/bin/anyenv init
-# anyenv install --init
+# install asdf
+# https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
 # install dein.vim
 mkdir -p ~/.cache/dein
@@ -15,7 +14,6 @@ rm -rf ~/.config
 rm -rf ~/.tmux.conf
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
-rm -rf ~/.zprofile
 rm -rf ~/.ssh/rc
 
 
@@ -27,6 +25,4 @@ ln -snfv ${DOT_DIR}/.config ~/.config
 ln -snfv ${DOT_DIR}/.tmux.conf ~/.tmux.conf
 ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
-ln -snfv ${DOT_DIR}/.zprofile ~/.zprofile
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
-

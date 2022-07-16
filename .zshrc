@@ -76,8 +76,6 @@ alias vim='nvim'
 # === completion ===
 # ! でロード完了文字を非表示に
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
-autoload -Uz compinit
-compinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -183,9 +181,13 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
-# === anyenv ===
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+# === asdf ===
+# https://asdf-vm.com/guide/getting-started.html
+ASDF_INIT_FILE="$HOME/.asdf/asdf.sh"
+if [ -e ${ASDF_INIT_FILE} ]; then
+  . "${ASDF_INIT_FILE}"
+  fpath=(${ASDF_DIR}/completions $fpath)
+fi
 
 # === go ===
 export GOPATH=$HOME/go
@@ -232,3 +234,5 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/nomad nomad
 
 complete -o nospace -C /usr/local/bin/vault vault
+
+autoload -Uz compinit && compinit
