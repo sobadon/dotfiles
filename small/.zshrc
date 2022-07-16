@@ -130,6 +130,9 @@ zinit light olets/zsh-abbr
 
 autoload -U +X bashcompinit && bashcompinit
 
+# 自前設置や
+export PATH=$PATH:${HOME}/.local/bin
+
 # last
 
 autoload -Uz compinit && compinit

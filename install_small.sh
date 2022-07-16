@@ -3,6 +3,9 @@
 set -eu
 set -o pipefail
 
+# prepare custom binary
+mkdir -p ~/.local/bin/
+
 # install peco
 PECO_VERSION=v0.5.10
 wget https://github.com/peco/peco/releases/download/${PECO_VERSION}/peco_linux_amd64.tar.gz
