@@ -100,10 +100,6 @@ setopt no_beep
 # 環境変数を補完
 setopt AUTO_PARAM_KEYS
 
-# Ctrl + R の履歴検索でワイルドカードを
-bindkey '^R' history-incremental-pattern-search-backward
-setopt extended_glob
-
 # 履歴検索
 # https://wiki.archlinux.jp/index.php/Zsh
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
