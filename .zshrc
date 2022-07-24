@@ -18,7 +18,6 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     zdharma-continuum/zinit-annex-rust
-
 ### End of Zinit's installer chunk
 
 
@@ -29,36 +28,30 @@ SAVEHIST=1000000
 setopt inc_append_history
 setopt share_history
 setopt hist_reduce_blanks
-
 setopt histignorealldups
-
 # 行頭がスペースのコマンドは history に残さない
 setopt HIST_IGNORE_SPACE
 
-# Use emacs keybindings even if our EDITOR is set to vi
+# Emacs キーバインド
 bindkey -e
 
 # color
-autoload -Uz colors
-colors
+autoload -Uz colors && colors
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # select-word-style
-# Ctrl + W のときにディレクトリ1階層だけ削除とかをするために
-autoload -Uz select-word-style
-select-word-style default
+# https://github.com/zsh-users/zsh/blob/cb59dfb3a6f6cce414c5b852c138d5f6bea6d563/Functions/Zle/select-word-style#L76-L81
+autoload -Uz select-word-style && select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|."
 zstyle ':zle:*' word-style unspecified
 
-# === alias ====
-# ls color
+# alias
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
 
 # history timestamp
 alias h='fc -lt '%F %T' 1'
 
-# v option: 進捗表示
 alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
@@ -72,13 +65,12 @@ alias g='cd $(ghq root)/$(ghq list | peco)'
 # nvim
 alias vim='nvim'
 
-# === completion ===
-# ! でロード完了文字を非表示に
-zinit ice wait'!0'; zinit light zsh-users/zsh-completions
+# completion
+zinit ice wait'!0'
+zinit light zsh-users/zsh-completions
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
-# zstyle ':completion:*' format 'Completing %d'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
 eval "$(dircolors -b)"
@@ -86,8 +78,6 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-# 補完選択中のものがハイライトされないのでコメントアウト
-# zstyle ':completion:*' menu select=long
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
@@ -110,17 +100,12 @@ fi
 # krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# === setopt ===
-# 日本語ファイル名
-setopt print_eight_bit
-
 # beep を無効
 setopt no_beep
 
 # 環境変数を補完
 setopt AUTO_PARAM_KEYS
 
-# === bindkey ===
 # Ctrl + R の履歴検索でワイルドカードを
 bindkey '^R' history-incremental-pattern-search-backward
 setopt extended_glob
@@ -169,18 +154,17 @@ bindkey '^G' peco-cdr
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-# === theme ===
+
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL=$
 
-# === plugin ===
+
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
-# === asdf ===
 # https://asdf-vm.com/guide/getting-started.html
 ASDF_INIT_FILE="$HOME/.asdf/asdf.sh"
 if [ -e ${ASDF_INIT_FILE} ]; then
@@ -188,12 +172,10 @@ if [ -e ${ASDF_INIT_FILE} ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
-# === go ===
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
-# direnv
 if type direnv > /dev/null; then
   eval "$(direnv hook zsh)"
 fi
@@ -233,5 +215,10 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/nomad nomad
 
 complete -o nospace -C /usr/local/bin/vault vault
+
+# 自前設置や
+export PATH=$PATH:${HOME}/.local/bin
+
+# last
 
 autoload -Uz compinit && compinit
