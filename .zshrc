@@ -21,6 +21,8 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 
+export PATH=/sbin:${PATH}
+
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
