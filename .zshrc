@@ -210,9 +210,9 @@ fi
 if [ -e /home/sbdn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbdn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/nomad nomad
+complete -o nospace -C nomad nomad
 
-complete -o nospace -C /usr/local/bin/vault vault
+complete -o nospace -C vault vault
 
 # 自前設置や
 export PATH=$PATH:${HOME}/.local/bin
