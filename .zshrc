@@ -51,6 +51,13 @@ zstyle ':zle:*' word-style unspecified
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
 
+# Ansible の synchronize module で rsync を実行するとき
+# 次のようなオプションが使われることがある
+# --usermap=*:root --groupmap=*:root
+# このとき * に反応してしまいコケるので、そうならないよう無理矢理回避する
+# 同じ：https://github.com/ansible/ansible/issues/64971
+alias rsync='noglob rsync'
+
 # history timestamp
 alias h='fc -lt '%F %T' 1'
 
