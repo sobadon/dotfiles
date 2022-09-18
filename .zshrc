@@ -221,6 +221,12 @@ complete -o nospace -C nomad nomad
 
 complete -o nospace -C vault vault
 
+# gcloud の補完スクリプトのパスをうまく取得できないっぽい？ので超無理やりやっちゃう
+gcloud_completion_file=${HOME}/.asdf/installs/gcloud/402.0.0/completion.zsh.inc
+if [ -e ${gcloud_completion_file} ]; then
+  . ${gcloud_completion_file}
+fi
+
 # 自前設置や
 export PATH=$PATH:${HOME}/.local/bin
 
