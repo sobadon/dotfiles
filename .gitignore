@@ -17,3 +17,4 @@
 !small/.config/git
 !small/.config/zsh
 !small/.ssh/rc
+!.digrc

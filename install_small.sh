@@ -19,6 +19,7 @@ rm -rf ~/.tmux.conf
 rm -rf ~/.bashrc
 rm -rf ~/.zshrc
 rm -rf ~/.ssh/rc
+rm -rf ~/.digrc
 
 DOT_DIR="${HOME}/dotfiles/small"
 ln -snfv ${DOT_DIR}/.config ~/.config
@@ -26,3 +27,4 @@ ln -snfv ${DOT_DIR}/.tmux.conf ~/.tmux.conf
 ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
+ln -snfv ${DOT_DIR}/.digrc ~/.digrc
