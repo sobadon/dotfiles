@@ -230,6 +230,9 @@ fi
 # 自前設置や
 export PATH=$PATH:${HOME}/.local/bin
 
+
+export EDITOR=vi
+
 # last
 
 autoload -Uz compinit && compinit
