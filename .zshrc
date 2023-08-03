@@ -239,6 +239,12 @@ if [[ `uname -a` == *WSL2* ]]; then
   ln -s -f /mnt/c/Windows/System32/cmd.exe ${HOME}/.local/bin/cmd.exe
 fi
 
+# fly
+# https://fly.io/docs/hands-on/install-flyctl/
+export FLYCTL_INSTALL="${HOME}/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+
 # last
 
 autoload -Uz compinit && compinit
