@@ -233,6 +233,12 @@ export PATH=$PATH:${HOME}/.local/bin
 
 export EDITOR=vi
 
+if [[ `uname -a` == *WSL2* ]]; then
+  # vault login などで cmd.exe を呼び出すため
+  # /etc/wsl.conf で appendWindowsPath = false が指定されていると cmd.exe が PATH に存在しないため
+  ln -s /mnt/c/Windows/System32/cmd.exe ${HOME}/.local/bin/cmd.exe
+fi
+
 # last
 
 autoload -Uz compinit && compinit
