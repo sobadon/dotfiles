@@ -71,9 +71,6 @@ alias sudo='sudo '
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 
-# nvim
-alias vim='nvim'
-
 # completion
 zinit ice wait'!0'
 zinit light zsh-users/zsh-completions
@@ -95,19 +92,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 bindkey '^[[Z' reverse-menu-complete
-
-# kubectl
-if type kubectl > /dev/null; then
-  source <(kubectl completion zsh)
-fi
-
-# helm
-if type helm > /dev/null; then
-  source <(helm completion zsh)
-fi
-
-# krew
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # beep を無効
 setopt no_beep
@@ -133,28 +117,6 @@ function peco-history-selection() {
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
-
-# cdr
-# https://qiita.com/reireias/items/fd96d67ccf1fdffb24ed
-# cdr
-if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
-    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-    add-zsh-hook chpwd chpwd_recent_dirs
-    zstyle ':completion:*' recent-dirs-insert both
-    zstyle ':chpwd:*' recent-dirs-default true
-    zstyle ':chpwd:*' recent-dirs-max 1000
-    zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/chpwd-recent-dirs"
-fi
-
-function peco-cdr () {
-    local selected_dir="$(cdr -l | sed 's/^[0-9]\+ \+//' | peco --prompt="cdr >" --query "$LBUFFER")"
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-}
-zle -N peco-cdr
-bindkey '^G' peco-cdr
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
@@ -218,8 +180,6 @@ if [[ `uname -a` == *WSL2* ]]; then
 #     unset wsl2_ssh_pageant_bin
 #   fi
 fi
-
-if [ -e /home/sbdn/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sbdn/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C nomad nomad
