@@ -182,9 +182,6 @@ if [[ `uname -a` == *WSL2* ]]; then
 fi
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C nomad nomad
-
-complete -o nospace -C vault vault
 
 # gcloud の補完スクリプトのパスをうまく取得できないっぽい？ので超無理やりやっちゃう
 gcloud_completion_file=${HOME}/.asdf/installs/gcloud/402.0.0/completion.zsh.inc
@@ -213,3 +210,7 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # last
 
 autoload -Uz compinit && compinit
+
+# PATH がすべて整った上で
+complete -o nospace -C nomad nomad
+complete -o nospace -C vault vault
