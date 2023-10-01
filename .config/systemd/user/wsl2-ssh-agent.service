@@ -1,0 +1,11 @@
+[Unit]
+Description=SSH Agent Pipe for WSL2
+ConditionPathExists=%h/.ssh/npiperelay.exe
+
+[Service]
+ExecStartPre=-rm %h/.ssh/agent.sock
+ExecStart=socat "UNIX-LISTEN:%h/.ssh/agent.sock,mode=600,fork" "EXEC:%h/.ssh/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent,nofork"
+ExecStopPost=-rm %h/.ssh/agent.sock
+
+[Install]
+WantedBy=default.target

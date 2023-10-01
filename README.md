@@ -28,3 +28,15 @@
 
 - npiperelay
   - https://github.com/jstarks/npiperelay/releases
+
+`%appdata%\gnupg\gpg-agent.conf`
+```
+enable-putty-support
+enable-ssh-support
+enable-win32-openssh-support
+```
+
+```sh
+systemctl --user daemon-reload
+systemctl --user enable --now wsl2-ssh-agent.service
+```

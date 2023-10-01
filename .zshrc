@@ -148,22 +148,10 @@ if type direnv > /dev/null; then
 fi
 
 if [[ `uname -a` == *WSL2* ]]; then
-  # https://github.com/BlackReloaded/wsl2-ssh-pageant
-  npiperelay_bin="${HOME}/.ssh/npiperelay.exe"
   # === SSH ===
   export SSH_AUTH_SOCK="$HOME/.ssh/agent.sock"
-  if ! ss -a | grep -q "$SSH_AUTH_SOCK"; then
-    rm -f "$SSH_AUTH_SOCK"
-    # 2023/09 下旬頃？に SSH_AUTH_SOCK まわりが壊れた
-    # きっかけわからん
-    # 確率でダメになる
-    # わけわからん
-    # 2023/09/29 01:35:44 socat[759] E bind(5, {AF=1 "/home/sbdn/.ssh/agent.sock"}, 28): Address already in use
-    # pkill socat して source ~/.zshrc で再読み込みさせるときちんと ssh-add -l で表示される
-    (setsid nohup socat "UNIX-LISTEN:${SSH_AUTH_SOCK},fork" "EXEC:${npiperelay_bin} -ei -s //./pipe/openssh-ssh-agent,nofork" &) > /dev/null 2>&1
-    #(setsid nohup socat "UNIX-LISTEN:${SSH_AUTH_SOCK},fork" "EXEC:${npiperelay_bin} -ei -s //./pipe/openssh-ssh-agent,nofork" &)
-  fi
-  unset npiperelay_bin
+  # agent.sock は systemd service でやる
+  # 2023/09 頃から、WSL2 初回起動時かつ zshrc で socat を実行すると .sock がないにも関わらず address already in use になってしまった
 
 #   GPG 使っとらんので一旦さよなら
 #   # === GPG ===
