@@ -4,12 +4,6 @@
 # https://asdf-vm.com/guide/getting-started.html#_2-download-asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
-# install dein.vim
-mkdir -p ~/.cache/dein
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-sh ./installer.sh ~/.cache/dein
-rm ./installer.sh
-
 rm -rf ~/.config
 rm -rf ~/.tmux.conf
 rm -rf ~/.bashrc

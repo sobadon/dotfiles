@@ -12,7 +12,6 @@
 !.ssh/rc
 !git/config
 !git/ignore
-!.config/nvim/*
 !.config/systemd/**/*
 !abbreviations
 !small/.config/git
