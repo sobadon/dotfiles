@@ -12,8 +12,5 @@
   editor = vim
   quotepath = false
 
-[user]
-  signingkey = 2FD31D13A3BBE18C
-
 [push]
   autoSetupRemote = true
