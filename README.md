@@ -8,7 +8,8 @@
   # beta の latest
   winget install "openssh beta"
   ```
-- Windows 側 OpenSSH Agent サービスは不要だから停止して自動起動は無効。
+- gpg-connect-agent との競合するのを防ぐため Windows 側 OpenSSH Agent サービスを停止しなければならない。あわせて自動起動を無効にする。
+  - gpg-connect-agent が `SSH_AUTH_SOCK=\\.\pipe\openssh-ssh-agent` を作る
   ```
   sc config ssh-agent start=disabled
   sc stop ssh-agent
