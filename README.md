@@ -21,6 +21,7 @@
 - https://github.com/benpye/wsl-ssh-pageant は不要だった
 
 - `%appdata%\gnupg\gpg-agent.conf`
+
   ```
   enable-putty-support
   enable-ssh-support
@@ -31,6 +32,7 @@
   - https://github.com/jstarks/npiperelay/releases
 
 `%appdata%\gnupg\gpg-agent.conf`
+
 ```
 enable-putty-support
 enable-ssh-support
@@ -41,3 +43,10 @@ enable-win32-openssh-support
 systemctl --user daemon-reload
 systemctl --user enable --now wsl2-ssh-agent.service
 ```
+
+## memo
+
+- Windows Terminal で WSL2 を利用している環境にて、2023/12 の Windows Update 頃から、ターミナルウィンドウを開いて、さらに追加でターミナルウィンドウを開いて計 2 コ存在する状態で、古いターミナルウィンドウを消して残ったターミナルウィンドウで `ssh-add -l` すると以下エラーになる
+  - `error fetching identities: communication with agent failed`
+  - `systemctl --user restart wsl2-ssh-agent.service` でなおる
+  - `/run/WSL/**_interop` の挙動が変わった
