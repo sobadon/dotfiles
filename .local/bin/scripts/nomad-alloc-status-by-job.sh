@@ -2,11 +2,13 @@
 
 # nomad-alloc-status-by-job.sh <job_id>
 
-set -eux
+set -eu
 
-# ジョブ名を引数から取得
 job_id=$1
-# running が 2 つ以上あると壊れる
-alloc_id=$(nomad job allocs -t '{{ range . }}{{ if eq .ClientStatus "running" }}{{ println .ID }}{{ end }}{{ end }}' $job_id)
+alloc_ids=$(nomad job allocs -t '{{ range . }}{{ if eq .ClientStatus "running" }}{{ println .ID }}{{ end }}{{ end }}' $job_id)
 
-nomad alloc status $alloc_id
+for alloc_id in $alloc_ids; do
+  echo ""
+  echo "===================="
+  nomad alloc status $alloc_id
+done
