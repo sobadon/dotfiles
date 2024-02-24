@@ -179,7 +179,7 @@ fi
 
 # 自前設置や
 export PATH=$PATH:${HOME}/.local/bin
-
+export PATH=$PATH:${HOME}/.local/bin/scripts
 
 export EDITOR=vi
 

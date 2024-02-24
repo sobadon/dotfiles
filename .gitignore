@@ -19,3 +19,4 @@
 !small/.ssh/rc
 !.digrc
 !README.md
+!.local/bin/scripts/**

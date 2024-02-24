@@ -14,6 +14,8 @@ rm -rf ~/.digrc
 
 DOT_DIR="${HOME}/dotfiles"
 
+mkdir -p ~/.local/bin/scripts
+
 #  ln -snfv ${DOT_DIRECTORY}/${f} ${HOME}/${f}
 
 ln -snfv ${DOT_DIR}/.config ~/.config
@@ -22,3 +24,4 @@ ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
 ln -snfv ${DOT_DIR}/.digrc ~/.digrc
+ln -snfv ${DOT_DIR}/.local/bin/scripts ~/.local/bin/
