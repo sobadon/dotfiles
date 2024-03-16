@@ -37,9 +37,12 @@ setopt HIST_IGNORE_SPACE
 # Emacs キーバインド
 bindkey -e
 
-# color
-autoload -Uz colors && colors
 export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+eval "$(dircolors -b)"
+# ディレクトリ 青色つらいので
+export LS_COLORS=$LS_COLORS:'di=01;36:'
+autoload -Uz colors && colors
 
 # select-word-style
 # https://github.com/zsh-users/zsh/blob/cb59dfb3a6f6cce414c5b852c138d5f6bea6d563/Functions/Zle/select-word-style#L76-L81
@@ -79,9 +82,10 @@ zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# これより前で LS_COLORS の di を上書きしているが zsh の completion においてはそれが反映されないので
+# ここで上書き
+zstyle ':completion:*' list-colors 'di=01;36'
 zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
@@ -125,7 +129,8 @@ bindkey "^[[1;5D" backward-word
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL=$
-
+# 見づらいので blue から変更
+zstyle :prompt:pure:path color cyan
 
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
