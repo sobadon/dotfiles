@@ -51,3 +51,4 @@ systemctl --user enable --now wsl2-ssh-agent.service
   - `error fetching identities: communication with agent failed`
   - `systemctl --user restart wsl2-ssh-agent.service` でなおる
   - `/run/WSL/**_interop` の挙動が変わった
+- Windows & WSL2 & YubiKey：https://memo.chasoba.net/p/59755/
