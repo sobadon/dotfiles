@@ -10,4 +10,4 @@
 # とりあえず末尾 怪しい
 export WSL_INTEROP=/run/WSL/`ls -tr /run/WSL | tail -n1`
 echo aa "$WSL_INTEROP"
-socat "UNIX-LISTEN:${HOME}/.ssh/agent.sock,mode=600,fork" "EXEC:${HOME}/.ssh/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent,nofork"
+socat "UNIX-LISTEN:${HOME}/.ssh/agent.sock,mode=600,fork" "EXEC:/mnt/c/Users/sbdn/wsl2_tools/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent,nofork"

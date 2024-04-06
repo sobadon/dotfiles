@@ -30,6 +30,7 @@
 
 - npiperelay
   - https://github.com/jstarks/npiperelay/releases
+  - `/mnt/c/Users/sbdn/wsl2_tools/npiperelay.exe` へ
 
 `%appdata%\gnupg\gpg-agent.conf`
 
