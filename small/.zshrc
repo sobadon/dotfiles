@@ -80,6 +80,13 @@ alias mv='mv -v'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
+# tempdir
+function tempdir() {
+    local date_str=$(TZ=Asia/Tokyo date +%Y%m%d)
+    mkdir -p ~/temp/${date_str}-$1
+    cd ~/temp/${date_str}-$1
+}
+
 # completion
 zinit ice wait'!0'
 zinit light zsh-users/zsh-completions

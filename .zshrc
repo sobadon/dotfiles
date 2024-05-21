@@ -74,6 +74,13 @@ alias sudo='sudo '
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 
+# tempdir
+function tempdir() {
+    local date_str=$(TZ=Asia/Tokyo date +%Y%m%d)
+    mkdir -p ~/temp/${date_str}-$1
+    cd ~/temp/${date_str}-$1
+}
+
 # completion
 zinit ice wait'!0'
 zinit light zsh-users/zsh-completions
