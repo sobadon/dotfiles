@@ -28,3 +28,8 @@ ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
 ln -snfv ${DOT_DIR}/.digrc ~/.digrc
+
+# まぜこぜ
+mkdir -p ~/.local/bin/scripts
+DOT_DIR="${HOME}/dotfiles"
+ln -snfv ${DOT_DIR}/.local/bin/scripts ~/.local/bin/
