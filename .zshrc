@@ -74,6 +74,11 @@ alias sudo='sudo '
 # ghq
 alias g='cd $(ghq root)/$(ghq list | peco)'
 
+# iproute color 無効化
+# https://github.com/iproute2/iproute2/blob/v6.9.0/lib/color.c#L96-L120
+# NO_COLOR 効かない
+alias ip='ip -color=never'
+
 # tempdir
 function tempdir() {
     local date_str=$(TZ=Asia/Tokyo date +%Y%m%d)
