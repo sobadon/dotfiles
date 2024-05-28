@@ -7,6 +7,8 @@
 # Usage:
 # perf-gen-flamegraph.sh
 
+set -e pipefail
+
 # 最新の *.data ファイルを取得
 latest_data_file=$(ls -t *.data | head -n 1)
 timestamp=$(echo $latest_data_file | grep -oP '\d{8}-\d{6}')
