@@ -84,6 +84,7 @@ alias sudo='sudo '
 # https://github.com/iproute2/iproute2/blob/v6.9.0/lib/color.c#L96-L120
 # NO_COLOR 効かない
 alias ip='ip -color=never'
+alias bridge='bridge -color=never'
 
 # tempdir
 function tempdir() {
