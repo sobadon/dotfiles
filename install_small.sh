@@ -26,6 +26,7 @@ ln -snfv ${DOT_DIR}/.config ~/.config
 ln -snfv ${DOT_DIR}/.tmux.conf ~/.tmux.conf
 ln -snfv ${DOT_DIR}/.bashrc ~/.bashrc
 ln -snfv ${DOT_DIR}/.zshrc ~/.zshrc
+mkdir -p ~/.ssh
 ln -snfv ${DOT_DIR}/.ssh/rc ~/.ssh/rc
 ln -snfv ${DOT_DIR}/.digrc ~/.digrc
 
