@@ -33,4 +33,4 @@ ln -snfv ${DOT_DIR}/.digrc ~/.digrc
 # まぜこぜ
 mkdir -p ~/.local/bin/scripts
 DOT_DIR="${HOME}/dotfiles"
-ln -snfv ${DOT_DIR}/.local/bin/scripts ~/.local/bin/
+ln -snfvd ${DOT_DIR}/.local/bin/scripts ~/.local/bin/
