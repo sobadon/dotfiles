@@ -27,4 +27,16 @@ vim.api.nvim_set_keymap('n', '<S-h>', ':bprev<CR>', { noremap = true, silent = t
 
 vim.api.nvim_set_keymap('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
 
+local function create_worklog(title)
+  local year_month = os.date("%Y%m")
+  local year_month_day = os.date("%Y%m%d")
+  local dir = "worklog/" .. year_month .. "/" .. year_month_day .. "-" .. title
+  vim.fn.mkdir(dir, "p")
+  local file = dir .. "/README.md"
+  vim.cmd("edit " .. file)
+end
+vim.api.nvim_create_user_command("CreateWorklog", function(opts)
+  create_worklog(opts.args)
+end, { nargs = 1 })
+
 require("config.lazy")
