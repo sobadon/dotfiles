@@ -217,6 +217,10 @@ require("lazy").setup({
         vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
       end
     },
+    {
+      "jiangmiao/auto-pairs",
+      commit = "39f06b873a8449af8ff6a3eee716d3da14d63a76",
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
