@@ -54,6 +54,11 @@ zstyle ':zle:*' word-style unspecified
 alias ls='ls --color=auto'
 alias ll='ls -alh --color=auto'
 
+if type nvim > /dev/null; then
+    alias vi='nvim'
+    alias vim='nvim'
+fi
+
 # Ansible の synchronize module で rsync を実行するとき
 # 次のようなオプションが使われることがある
 # --usermap=*:root --groupmap=*:root
