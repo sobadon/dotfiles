@@ -45,6 +45,12 @@ systemctl --user daemon-reload
 systemctl --user enable --now wsl2-ssh-agent.service
 ```
 
+## neovim dependency
+
+```shell
+sudo apt install ripgrep cmake clang build-essential wl-clipboard -y
+```
+
 ## memo
 
 - Windows Terminal で WSL2 を利用している環境にて、2023/12 の Windows Update 頃から、ターミナルウィンドウを開いて、さらに追加でターミナルウィンドウを開いて計 2 コ存在する状態で、古いターミナルウィンドウを消して残ったターミナルウィンドウで `ssh-add -l` すると以下エラーになる
