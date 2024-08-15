@@ -27,6 +27,7 @@ require("lazy").setup({
   spec = {
     {
       "nvim-treesitter/nvim-treesitter",
+      tag = "v0.9.2",
       build = ":TSUpdate",
       config = function()
         local configs = require("nvim-treesitter.configs")
@@ -40,12 +41,14 @@ require("lazy").setup({
     },
     {
       "bullets-vim/bullets.vim",
+      tag = "v1.11.0",
       config = function()
         vim.g.bullets_enabled_file_types = {'markdown'}
       end
     },
     {
       'MeanderingProgrammer/render-markdown.nvim',
+      tag = "v6.1.0",
       opts = {},
       dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
       -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
@@ -87,6 +90,7 @@ require("lazy").setup({
     },
     {
       "hedyhli/outline.nvim",
+      commit = "b47514b8f4ae3207c499a69eec05c29cf2182af8",
       -- config = function()
       --   -- Example mapping to toggle outline
       --   vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
@@ -113,12 +117,13 @@ require("lazy").setup({
         },
       },
     },
-    {
-      "echasnovski/mini.surround",
-      -- TODO: config?
-    },
+    -- {
+    --   "echasnovski/mini.surround",
+    --   -- TODO: config?
+    -- },
     {
       "nvim-telescope/telescope.nvim",
+      tag = "0.1.8",
       dependencies = {
         {
           "nvim-telescope/telescope-fzf-native.nvim",
@@ -162,6 +167,7 @@ require("lazy").setup({
     -- },
     {
       "akinsho/bufferline.nvim",
+      tag = "v4.7.0",
       -- TODO: config?
       dependencies = {
         'nvim-tree/nvim-web-devicons',
@@ -189,6 +195,7 @@ require("lazy").setup({
     },
     {
       "nvim-tree/nvim-tree.lua",
+      tag = "v1.6.0",
       config = function()
         require("nvim-tree").setup {
           view = {
