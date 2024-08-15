@@ -66,9 +66,6 @@ fi
 # 同じ：https://github.com/ansible/ansible/issues/64971
 alias rsync='noglob rsync'
 
-# history timestamp
-alias h='fc -lt '%F %T' 1'
-
 alias rm='rm -v'
 alias cp='cp -v'
 alias mv='mv -v'
