@@ -20,3 +20,4 @@
 !.digrc
 !README.md
 !.local/bin/scripts/**
+!.config/nvim/**
