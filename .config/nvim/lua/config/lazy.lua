@@ -191,8 +191,23 @@ require("lazy").setup({
       "nvim-tree/nvim-tree.lua",
       config = function()
         require("nvim-tree").setup {
-          vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+          view = {
+            centralize_selection = true,
+            float = {
+              enable = true,
+              quit_on_focus_loss = true,
+              open_win_config = {
+                relative = "editor",
+                border = "rounded",
+                width = 120,
+                height = 120,
+                row = 1,
+                col = 1,
+              },
+            },
+          },
         }
+        vim.api.nvim_set_keymap('n', '<C-b>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
       end
     },
   },
