@@ -27,6 +27,12 @@ vim.api.nvim_set_keymap('n', '<S-h>', ':bprev<CR>', { noremap = true, silent = t
 
 vim.api.nvim_set_keymap('n', '<C-w>', ':bd<CR>', { noremap = true, silent = true })
 
+-- trailing white space
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
+})
+
 local function create_worklog(title)
   local year_month = os.date("%Y%m")
   local year_month_day = os.date("%Y%m%d")
