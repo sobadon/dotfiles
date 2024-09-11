@@ -198,6 +198,9 @@ require("lazy").setup({
       tag = "v1.6.0",
       config = function()
         require("nvim-tree").setup {
+          update_focused_file = {
+            enable = true,
+          },
           view = {
             centralize_selection = true,
             float = {
