@@ -1,6 +1,6 @@
 [Unit]
 Description=SSH Agent Pipe for WSL2
-ConditionPathExists=%h/.ssh/npiperelay.exe
+ConditionPathExists=/mnt/c/Users/sbdn/wsl2_tools/npiperelay.exe
 
 [Service]
 ExecStartPre=-rm %h/.ssh/agent.sock
