@@ -1,0 +1,9 @@
+[Unit]
+Description=WSL2 startup workaround
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/systemd/user/wsl2-workaround-startup-exec.sh
+
+[Install]
+WantedBy=default.target

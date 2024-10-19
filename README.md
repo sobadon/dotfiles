@@ -43,6 +43,7 @@ enable-win32-openssh-support
 ```sh
 systemctl --user daemon-reload
 systemctl --user enable --now wsl2-ssh-agent.service
+systemctl --user enable --now wsl2-workaround-startup.service
 ```
 
 ## neovim dependency
