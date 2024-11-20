@@ -1,25 +1,16 @@
 # dotfiles
 
-## Windows + WSL2
+## Windows11 24H2 + WSL2
 
-- Linux 側 OpenSSH より Windows 側 OpenSSH のバージョンが勝つようにする。
-  ```
-  # https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH
-  # beta の latest
-  winget install "openssh beta"
-  ```
 - gpg-connect-agent との競合するのを防ぐため Windows 側 OpenSSH Agent サービスを停止しなければならない。あわせて自動起動を無効にする。
   - gpg-connect-agent が `SSH_AUTH_SOCK=\\.\pipe\openssh-ssh-agent` を作る
   ```
   sc config ssh-agent start=disabled
   sc stop ssh-agent
   ```
-- gpg4win 4.1.0, 4.2.0 で動いた。
+- gpg4win 4.1.0, 4.2.0, 4.3.1 で動いた。
   - `gpg-connect-agent /bye` は必要
 - `enable-win32-openssh-support` によって `//./pipe/openssh-ssh-agent` にパイプができあがる？
-- Windows ユーザー側環境変数 `SSH_AUTH_SOCK` に `\\.\pipe\openssh-ssh-agent` を設定する
-- https://github.com/benpye/wsl-ssh-pageant は不要だった
-
 - `%appdata%\gnupg\gpg-agent.conf`
 
   ```
@@ -27,24 +18,23 @@
   enable-ssh-support
   enable-win32-openssh-support
   ```
-
 - npiperelay
   - https://github.com/jstarks/npiperelay/releases
   - `/mnt/c/Users/sbdn/wsl2_tools/npiperelay.exe` へ
+- `%appdata%\gnupg\gpg-agent.conf`
 
-`%appdata%\gnupg\gpg-agent.conf`
+    ```
+    enable-putty-support
+    enable-ssh-support
+    enable-win32-openssh-support
+    ```
+- いろいろ自動起動
 
-```
-enable-putty-support
-enable-ssh-support
-enable-win32-openssh-support
-```
-
-```sh
-systemctl --user daemon-reload
-systemctl --user enable --now wsl2-ssh-agent.service
-systemctl --user enable --now wsl2-workaround-startup.service
-```
+    ```sh
+    systemctl --user daemon-reload
+    systemctl --user enable --now wsl2-ssh-agent.service
+    systemctl --user enable --now wsl2-workaround-startup.service
+    ```
 
 ## neovim dependency
 
