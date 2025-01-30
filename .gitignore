@@ -21,3 +21,4 @@
 !README.md
 !.local/bin/scripts/**
 !.config/nvim/**
+!.config/wezterm/wezterm.lua
