@@ -20,6 +20,12 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
+# brew
+if [[ `uname -a` == *Darwin* ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  # dircolors, etc ...
+  export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+fi
 
 export PATH=/sbin:${PATH}
 
@@ -189,6 +195,11 @@ if [[ `uname -a` == *WSL2* ]]; then
 #   fi
 fi
 
+if [[ `uname -a` == *Darwin* ]]; then
+  export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+  gpgconf --launch gpg-agent
+fi
+
 autoload -U +X bashcompinit && bashcompinit
 
 # gcloud の補完スクリプトのパスをうまく取得できないっぽい？ので超無理やりやっちゃう
@@ -214,7 +225,6 @@ fi
 export FLYCTL_INSTALL="${HOME}/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-
 # last
 
 autoload -Uz compinit && compinit
@@ -222,3 +232,8 @@ autoload -Uz compinit && compinit
 # PATH がすべて整った上で
 complete -o nospace -C nomad nomad
 complete -o nospace -C vault vault
+
+# external alias
+if [ -f ~/.zsh_alias_hidden ]; then
+    source ~/.zsh_alias_hidden
+fi
