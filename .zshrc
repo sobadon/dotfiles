@@ -1,3 +1,9 @@
+# profile start
+# zmodload zsh/zprof
+# if [ $? = 0 ]; then
+#  zprof
+# fi
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -227,7 +233,12 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # last
 
-autoload -Uz compinit && compinit
+if [[ `uname -a` == *Darwin* ]]; then
+  # ignore security check warn
+  autoload -Uz compinit && compinit -u
+else
+  autoload -Uz compinit && compinit
+fi
 
 # PATH がすべて整った上で
 complete -o nospace -C nomad nomad
@@ -237,3 +248,9 @@ complete -o nospace -C vault vault
 if [ -f ~/.zsh_alias_hidden ]; then
     source ~/.zsh_alias_hidden
 fi
+
+# profile end
+# type zprof > /dev/null 2>&1
+# if [ $? = 0 ]; then
+#   zprof
+# fi
