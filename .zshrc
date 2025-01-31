@@ -249,6 +249,11 @@ if [ -f ~/.zsh_alias_hidden ]; then
     source ~/.zsh_alias_hidden
 fi
 
+# condition abbr
+if [[ `uname -a` == *WSL2* ]]; then
+    abbr --quiet code="'/mnt/c/Program Files/Microsoft VS Code/bin/code' ."
+fi
+
 # profile end
 # type zprof > /dev/null 2>&1
 # if [ $? = 0 ]; then
