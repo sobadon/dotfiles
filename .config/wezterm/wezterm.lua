@@ -5,7 +5,7 @@ config.font = wezterm.font 'UDEV Gothic 35NF'
 config.font_size = 14.0
 
 -- SKK
-config.macos_forward_to_ime_modifier_mask = "CTRL"
+config.macos_forward_to_ime_modifier_mask = 'SHIFT|CTRL'
 
 config.keys = {
   -- Command + W -> Command + Shift + W
