@@ -22,8 +22,10 @@ config.keys = {
 }
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  -- cp ~/.config/wezterm/wezterm.lua /mnt/c/Users/sbdn/.config/wezterm/
   config.default_domain = 'WSL:Debian'
   config.font_size = 10.0
+  config.window_decorations = "RESIZE"
 end
 
 return config
