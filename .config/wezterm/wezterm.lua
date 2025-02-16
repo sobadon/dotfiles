@@ -21,4 +21,9 @@ config.keys = {
   },
 }
 
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+  config.default_domain = 'WSL:Debian'
+  config.font_size = 10.0
+end
+
 return config
