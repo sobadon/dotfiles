@@ -180,6 +180,10 @@ bindkey '^R' peco-history-selection
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+zinit load 'zsh-users/zsh-history-substring-search'
+zinit ice wait atload'_history_substring_search_config'
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
