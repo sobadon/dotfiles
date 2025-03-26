@@ -42,6 +42,10 @@
 sudo apt install ripgrep cmake clang build-essential wl-clipboard -y
 ```
 
+```shell
+brew install ripgrep
+```
+
 ## memo
 
 - Windows Terminal で WSL2 を利用している環境にて、2023/12 の Windows Update 頃から、ターミナルウィンドウを開いて、さらに追加でターミナルウィンドウを開いて計 2 コ存在する状態で、古いターミナルウィンドウを消して残ったターミナルウィンドウで `ssh-add -l` すると以下エラーになる
