@@ -27,7 +27,7 @@ require("lazy").setup({
   spec = {
     {
       "nvim-treesitter/nvim-treesitter",
-      commit = "f197a15b0d1e8d555263af20add51450e5aaa1f0", -- v0.9.2
+      tag = "v0.9.3",
       build = ":TSUpdate",
       config = function()
         local configs = require("nvim-treesitter.configs")
@@ -41,18 +41,19 @@ require("lazy").setup({
     },
     {
       "bullets-vim/bullets.vim",
-      commit = "83fa7298085be647e6b378ef2c8ca491ca032154", -- v1.11.0
+      tag = "2.0.0",
       config = function()
         vim.g.bullets_enabled_file_types = {'markdown'}
       end
     },
     {
       'MeanderingProgrammer/render-markdown.nvim',
-      commit = "ced4a66f9bc38580f4797a789d2d5575fcd809fd", -- v6.1.0
+      tag = "v8.2.0",
       opts = {},
-      dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-      -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-      -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+      dependencies = {
+        { 'nvim-treesitter/nvim-treesitter' },
+        { 'echasnovski/mini.nvim', tag = "v0.15.0" },
+      },
       config = function()
         vim.api.nvim_set_hl(0, 'RenderMarkdownCode', {bg = '#333333'})
         vim.api.nvim_set_hl(0, 'RenderMarkdownCodeInline', {bg = '#333333'})
@@ -109,7 +110,7 @@ require("lazy").setup({
     },
     {
       "hedyhli/outline.nvim",
-      commit = "b47514b8f4ae3207c499a69eec05c29cf2182af8",
+      commit = "ae473fb51b7b6086de0876328c81a63f9c3ecfef", -- 2025/04/05 main latest
       -- config = function()
       --   -- Example mapping to toggle outline
       --   vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>",
@@ -142,10 +143,11 @@ require("lazy").setup({
     -- },
     {
       "nvim-telescope/telescope.nvim",
-      commit = "a0bbec21143c7bc5f8bb02e0005fa0b982edc026", -- 0.1.8
+      tag = "0.1.8",
       dependencies = {
         {
           "nvim-telescope/telescope-fzf-native.nvim",
+          commit = "1f08ed60cafc8f6168b72b80be2b2ea149813e55",
           build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release',
         },
       },
@@ -186,10 +188,10 @@ require("lazy").setup({
     -- },
     {
       "akinsho/bufferline.nvim",
-      commit = "2e3c8cc5a57ddd32f1edd2ffd2ccb10c09421f6c", -- v4.7.0
+      tag = "v4.9.1",
       -- TODO: config?
       dependencies = {
-        'nvim-tree/nvim-web-devicons',
+        { 'nvim-tree/nvim-web-devicons', commit = "4c3a5848ee0b09ecdea73adcd2a689190aeb728c" },
       },
       config = function()
         vim.opt.termguicolors = true
@@ -214,7 +216,7 @@ require("lazy").setup({
     },
     {
       "nvim-tree/nvim-tree.lua",
-      commit = "ad0b95dee55955817af635fa121f6e2486b10583", -- v1.6.0
+      tag = "nvim-tree-v1.11.0",
       config = function()
         require("nvim-tree").setup {
           update_focused_file = {
