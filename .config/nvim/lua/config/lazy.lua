@@ -27,7 +27,7 @@ require("lazy").setup({
   spec = {
     {
       "nvim-treesitter/nvim-treesitter",
-      tag = "v0.9.2",
+      commit = "f197a15b0d1e8d555263af20add51450e5aaa1f0", -- v0.9.2
       build = ":TSUpdate",
       config = function()
         local configs = require("nvim-treesitter.configs")
@@ -41,14 +41,14 @@ require("lazy").setup({
     },
     {
       "bullets-vim/bullets.vim",
-      tag = "v1.11.0",
+      commit = "83fa7298085be647e6b378ef2c8ca491ca032154", -- v1.11.0
       config = function()
         vim.g.bullets_enabled_file_types = {'markdown'}
       end
     },
     {
       'MeanderingProgrammer/render-markdown.nvim',
-      tag = "v6.1.0",
+      commit = "ced4a66f9bc38580f4797a789d2d5575fcd809fd", -- v6.1.0
       opts = {},
       dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
       -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
@@ -142,7 +142,7 @@ require("lazy").setup({
     -- },
     {
       "nvim-telescope/telescope.nvim",
-      tag = "0.1.8",
+      commit = "a0bbec21143c7bc5f8bb02e0005fa0b982edc026", -- 0.1.8
       dependencies = {
         {
           "nvim-telescope/telescope-fzf-native.nvim",
@@ -186,7 +186,7 @@ require("lazy").setup({
     -- },
     {
       "akinsho/bufferline.nvim",
-      tag = "v4.7.0",
+      commit = "2e3c8cc5a57ddd32f1edd2ffd2ccb10c09421f6c", -- v4.7.0
       -- TODO: config?
       dependencies = {
         'nvim-tree/nvim-web-devicons',
@@ -214,7 +214,7 @@ require("lazy").setup({
     },
     {
       "nvim-tree/nvim-tree.lua",
-      tag = "v1.6.0",
+      commit = "ad0b95dee55955817af635fa121f6e2486b10583", -- v1.6.0
       config = function()
         require("nvim-tree").setup {
           update_focused_file = {
