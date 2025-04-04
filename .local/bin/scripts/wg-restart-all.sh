@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -u
+set -ux
 
 if [[ $(hostname) == "nade2" ]]; then
     wg_ifs=("wg0" "wg1", "wg2", "wg3")
