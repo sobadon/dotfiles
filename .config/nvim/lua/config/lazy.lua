@@ -54,6 +54,9 @@ require("lazy").setup({
       -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
       -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
       config = function()
+        vim.api.nvim_set_hl(0, 'RenderMarkdownCode', {bg = '#333333'})
+        vim.api.nvim_set_hl(0, 'RenderMarkdownCodeInline', {bg = '#333333'})
+
         local configs = require("render-markdown")
         configs.setup({
           heading = {
@@ -68,7 +71,6 @@ require("lazy").setup({
           },
           code = {
             enabled = true,
-            -- enabled = false,
             sign = false,
             style = 'normal',
             position = 'left',
@@ -81,8 +83,6 @@ require("lazy").setup({
             border = 'tick',
             above = '▄',
             below = '▀',
-            -- highlight = 'RenderMarkdownCode',
-            -- highlight_inline = 'RenderMarkdownCodeInline',
           },
 
         })
