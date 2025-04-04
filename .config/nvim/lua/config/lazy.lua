@@ -59,6 +59,18 @@ require("lazy").setup({
 
         local configs = require("render-markdown")
         configs.setup({
+          win_options = {
+            conceallevel = {
+              default = 2,  -- Adjust the value as per your requirement
+              rendered = 0,  -- Ensures backticks are displayed in rendered mode
+            },
+            concealcursor = {
+              default = 'nc',  -- Adjust the value as per your requirement
+              rendered = '',  -- Ensures concealed text is shown in all modes
+            },
+          },
+          render_modes = { 'n', 'i', 'v' },  -- Enables rendering in normal, insert, and visual modes
+
           heading = {
             enabled = false,
           },
