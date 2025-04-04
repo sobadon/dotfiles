@@ -69,7 +69,7 @@ require("lazy").setup({
               rendered = '',  -- Ensures concealed text is shown in all modes
             },
           },
-          render_modes = { 'n', 'i', 'v' },  -- Enables rendering in normal, insert, and visual modes
+          render_modes = { 'n', 'i', 'v', 'V' },  -- Enables rendering in each mode
 
           heading = {
             enabled = false,
