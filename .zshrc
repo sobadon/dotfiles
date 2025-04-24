@@ -188,6 +188,8 @@ bindkey "^[[B" history-substring-search-down
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL=$
+# ときどき WSL2 の gpg-agent の SSH_AUTH_SOCK が固まる？のでやめる
+PURE_GIT_PULL=0
 # 見づらいので blue から変更
 zstyle :prompt:pure:path color cyan
 

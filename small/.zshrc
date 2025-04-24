@@ -171,6 +171,8 @@ bindkey "^[[B" history-substring-search-down
 # theme
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
 zinit light sindresorhus/pure
+# ときどき WSL2 の gpg-agent の SSH_AUTH_SOCK が固まる？のでやめる
+PURE_GIT_PULL=0
 PURE_PROMPT_SYMBOL=$
 
 # plugin
