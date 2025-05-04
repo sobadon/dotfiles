@@ -45,4 +45,11 @@ vim.api.nvim_create_user_command("CreateWorklog", function(opts)
   create_worklog(opts.args)
 end, { nargs = 1 })
 
+-- :terminal で開いたときに insert に
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "*", command = "startinsert" })
+
+-- :terminal で開いたときに行番号を消す
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "*", command = "setlocal norelativenumber" })
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "*", command = "setlocal nonumber" })
+
 require("config.lazy")
