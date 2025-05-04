@@ -2,7 +2,7 @@
 
 set -eu
 
-REPO_DIR="${HOME}/ghq/github.com/sobadon/ssh-config"
+REPO_DIR="${HOME}/ghq/git.chasoba.net/sobadon/ssh-config"
 
 if [[ ! -d "${REPO_DIR}" ]]; then
   echo "not found repo directory: ${REPO_DIR}"
