@@ -198,11 +198,17 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
+# PATH Order
 # https://asdf-vm.com/guide/getting-started.html
 ASDF_INIT_FILE="$HOME/.asdf/asdf.sh"
 if [ -e ${ASDF_INIT_FILE} ]; then
   . "${ASDF_INIT_FILE}"
   fpath=(${ASDF_DIR}/completions $fpath)
+fi
+
+if type aqua > /dev/null; then
+  export PATH="$(aqua root-dir)/bin:$PATH"
+  export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aquaproj-aqua/aqua.yaml
 fi
 
 export GOPATH=$HOME/go
@@ -264,11 +270,6 @@ fi
 # https://fly.io/docs/hands-on/install-flyctl/
 export FLYCTL_INSTALL="${HOME}/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-if type aqua > /dev/null; then
-  export PATH="$(aqua root-dir)/bin:$PATH"
-  export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aquaproj-aqua/aqua.yaml
-fi
 
 # last
 
