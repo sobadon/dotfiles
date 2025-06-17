@@ -16,9 +16,11 @@
 !abbreviations
 !small/.config/git
 !small/.config/zsh
+!small/.config/aquaproj-aqua/aqua.yaml
 !small/.ssh/rc
 !.digrc
 !README.md
 !.local/bin/scripts/**
 !.config/nvim/**
 !.config/wezterm/wezterm.lua
+!.config/aquaproj-aqua/aqua.yaml

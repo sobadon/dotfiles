@@ -187,6 +187,11 @@ autoload -U +X bashcompinit && bashcompinit
 export PATH=$PATH:${HOME}/.local/bin
 export PATH=$PATH:${HOME}/.local/bin/scripts
 
+if type aqua > /dev/null; then
+  export PATH="$(aqua root-dir)/bin:$PATH"
+  export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aquaproj-aqua/aqua.yaml
+fi
+
 # last
 
 autoload -Uz compinit && compinit
