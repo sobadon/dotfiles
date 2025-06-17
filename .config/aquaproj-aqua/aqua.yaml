@@ -4,3 +4,4 @@ registries:
 
 packages:
 - name: getsops/sops@v3.10.2
+- name: oven-sh/bun@bun-v1.2.16
