@@ -184,8 +184,8 @@ zinit light olets/zsh-abbr
 autoload -U +X bashcompinit && bashcompinit
 
 # 自前設置や
-export PATH=$PATH:${HOME}/.local/bin
-export PATH=$PATH:${HOME}/.local/bin/scripts
+export PATH=${HOME}/.local/bin:$PATH
+export PATH=${HOME}/.local/bin/scripts:$PATH
 
 if type aqua > /dev/null; then
   export PATH="$(aqua root-dir)/bin:$PATH"

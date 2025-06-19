@@ -255,8 +255,8 @@ if [ -e ${gcloud_completion_file} ]; then
 fi
 
 # 自前設置や
-export PATH=$PATH:${HOME}/.local/bin
-export PATH=$PATH:${HOME}/.local/bin/scripts
+export PATH=${HOME}/.local/bin:$PATH
+export PATH=${HOME}/.local/bin/scripts:$PATH
 
 export EDITOR=vi
 
