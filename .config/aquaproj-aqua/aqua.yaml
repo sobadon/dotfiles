@@ -5,3 +5,5 @@ registries:
 packages:
 - name: getsops/sops@v3.10.2
 - name: oven-sh/bun@bun-v1.2.16
+# なぜか incus ではなく incus-migrate になってしまう
+- name: lxc/incus@v6.13.0
