@@ -19,4 +19,4 @@ if [[ -n $(git status --porcelain) ]]; then
   git push origin $(git branch --show-current)
 fi
 
-cd -
+cd - > /dev/null
