@@ -10,3 +10,4 @@ packages:
 - name: goreleaser/goreleaser@v2.10.2
 - name: neovim/neovim@v0.11.4
 - name: x-motemen/ghq@v1.8.0
+- name: peco/peco@v0.5.11
