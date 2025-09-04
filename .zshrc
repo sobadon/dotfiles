@@ -198,6 +198,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light hlissner/zsh-autopair
 zinit light olets/zsh-abbr
 
+# 自前設置や
+export PATH=${HOME}/.local/bin:$PATH
+export PATH=${HOME}/.local/bin/scripts:$PATH
+
 # PATH Order
 # https://asdf-vm.com/guide/getting-started.html
 ASDF_INIT_FILE="$HOME/.asdf/asdf.sh"
@@ -253,10 +257,6 @@ gcloud_completion_file=${HOME}/.asdf/installs/gcloud/402.0.0/completion.zsh.inc
 if [ -e ${gcloud_completion_file} ]; then
   . ${gcloud_completion_file}
 fi
-
-# 自前設置や
-export PATH=${HOME}/.local/bin:$PATH
-export PATH=${HOME}/.local/bin/scripts:$PATH
 
 export EDITOR=vi
 
