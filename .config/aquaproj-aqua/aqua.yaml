@@ -11,3 +11,4 @@ packages:
 - name: neovim/neovim@v0.11.4
 - name: x-motemen/ghq@v1.8.0
 - name: peco/peco@v0.5.11
+- name: google/go-jsonnet@v0.21.0
