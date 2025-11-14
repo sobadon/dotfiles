@@ -14,3 +14,4 @@ packages:
 - name: google/go-jsonnet@v0.21.0
 - name: hashicorp/vault@v1.20.3
 - name: duckdb/duckdb@v1.4.0
+- name: rclone/rclone@v1.71.2
