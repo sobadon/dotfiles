@@ -11,7 +11,7 @@ fi
 
 cd "${REPO_DIR}"
 
-git pull --rebase --autostash origin $(git branch --show-current)
+git pull --autostash origin $(git branch --show-current)
 
 if [[ -n $(git status --porcelain) ]]; then
   git add .

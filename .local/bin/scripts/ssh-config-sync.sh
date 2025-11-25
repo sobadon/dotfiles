@@ -11,12 +11,12 @@ fi
 
 cd "${REPO_DIR}"
 
+git pull --autostash origin $(git branch --show-current)
+
 if [[ -n $(git status --porcelain) ]]; then
   git add .
   git commit -m "Update from $(hostname)"
+  git push origin $(git branch --show-current)
 fi
-
-git pull --autostash origin $(git branch --show-current)
-git push origin $(git branch --show-current)
 
 cd - > /dev/null
