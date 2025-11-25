@@ -14,3 +14,9 @@
 
 [push]
   autoSetupRemote = true
+
+[log]
+  date = iso-local
+
+[alias]
+	lg = log --graph --pretty=format:'%C(bold blue)%h%C(reset) %C(yellow)%ad%Creset %C(green)%d%Creset %s' --date=iso-local
