@@ -115,6 +115,16 @@ alias sudo='sudo '
 
 alias g='cd $(ghq root)/$(ghq list | fzf --layout=reverse --wrap)'
 
+wiki() {
+  local repo
+  repo=$(ghq list | grep -m1 'git.chasoba.net/sobadon/wiki')
+  if [[ -z "$repo" ]]; then
+    echo "repository not found" >&2
+    return 1
+  fi
+  cd "$(ghq root)/$repo"
+}
+
 # iproute color 無効化
 # https://github.com/iproute2/iproute2/blob/v6.9.0/lib/color.c#L96-L120
 # NO_COLOR 効かない
