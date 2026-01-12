@@ -113,8 +113,7 @@ alias mv='mv -v'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
-# ghq
-alias g='cd $(ghq root)/$(ghq list | peco)'
+alias g='cd $(ghq root)/$(ghq list | fzf --layout=reverse --wrap)'
 
 # iproute color 無効化
 # https://github.com/iproute2/iproute2/blob/v6.9.0/lib/color.c#L96-L120
@@ -167,15 +166,10 @@ zle -N down-line-or-beginning-search
 [[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
 [[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
 
-# peco
-# https://qiita.com/reireias/items/fd96d67ccf1fdffb24ed
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
-}
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+ZSH_FZF_HISTORY_SEARCH_FZF_EXTRA_ARGS='--layout=reverse --wrap'
+ZSH_FZF_HISTORY_SEARCH_EVENT_NUMBERS='0'
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
