@@ -19,3 +19,4 @@ packages:
 - name: cli/cli@v2.83.2
 - name: nodejs/node@v24.12.0
 - name: BurntSushi/ripgrep@15.1.0
+- name: direnv/direnv@v2.37.1
