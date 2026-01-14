@@ -7,6 +7,7 @@
 
 [pull]
   ff = only
+  autoStash = true
 
 [core]
   editor = vim
@@ -20,3 +21,6 @@
 
 [alias]
 	lg = log --graph --pretty=format:'%C(bold blue)%h%C(reset) %C(yellow)%ad%Creset %C(green)%d%Creset %s' --date=iso-local
+
+[rebase]
+  autoStash = true
