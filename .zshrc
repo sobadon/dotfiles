@@ -26,11 +26,16 @@ zinit light-mode for \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
+export PATH=/sbin:${PATH}
+
 # brew
 if [[ `uname -a` == *Darwin* ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
   # dircolors, etc ...
   export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+  # https://formulae.brew.sh/formula/inetutils
+  PATH="$(brew --prefix)/opt/inetutils/libexec/gnubin:$PATH"
 fi
 
 # OSC 133
@@ -60,8 +65,6 @@ function __prompt_preexec() {
 }
 preexec_functions+=(__prompt_preexec)
 precmd_functions+=(__prompt_precmd)
-
-export PATH=/sbin:${PATH}
 
 # history
 HISTFILE=$HOME/.zsh_history
