@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+ids=$(podman ps -a --filter "label=devcontainer.local_folder=$(pwd)" -q)
+if [ -n "$ids" ]; then
+  podman rm -f $ids
+else
+  echo "No devcontainer containers found for $(pwd)"
+fi
