@@ -278,6 +278,10 @@ fi
 export FLYCTL_INSTALL="${HOME}/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
+# https://aquaproj.github.io/docs/reference/nodejs-support/#1-configure-npms-prefix-config-and-the-environment-variable-path
+export NPM_CONFIG_PREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/npm-global" # You can change the path freely
+export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+
 # last
 
 if [[ `uname -a` == *Darwin* ]]; then
