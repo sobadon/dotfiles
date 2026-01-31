@@ -301,6 +301,18 @@ if [[ `uname -a` == *WSL2* ]]; then
     abbr --quiet code="'/mnt/c/Program Files/Microsoft VS Code/bin/code' ."
 fi
 
+# Dev Container
+# devcontainer exec --remote-env "REMOTE_CONTAINERS=true" zsh
+DEVC_PROMPT_SEGMENT='%F{2}%Bdevc%b%f '
+function __devc_precmd() {
+  if [[ "$REMOTE_CONTAINERS" == "true" ]]; then
+    if [[ "$PS1" != ${DEVC_PROMPT_SEGMENT}* ]]; then
+      PS1="${DEVC_PROMPT_SEGMENT}${PS1}"
+    fi
+  fi
+}
+precmd_functions+=(__devc_precmd)
+
 # profile end
 # type zprof > /dev/null 2>&1
 # if [ $? = 0 ]; then
