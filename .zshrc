@@ -217,6 +217,7 @@ if [ -e ${ASDF_INIT_FILE} ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
+export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
 if type aqua > /dev/null; then
   export PATH="$(aqua root-dir)/bin:$PATH"
   export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aquaproj-aqua/aqua.yaml

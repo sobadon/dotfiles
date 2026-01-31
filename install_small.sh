@@ -32,4 +32,6 @@ ln -snf ${DOT_DIR}/.ssh/rc ~/.ssh/rc
 rm -rf ~/.digrc
 ln -snf ${DOT_DIR}/.digrc ~/.digrc
 
-ln -snf ${DOT_DIR}/.local/bin/scripts ~/.local/bin/
+mkdir -p ~/.local/bin
+rm -rf ~/.local/bin/scripts
+ln -snf ${DOT_DIR}/.local/bin/scripts ~/.local/bin/scripts
