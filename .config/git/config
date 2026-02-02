@@ -24,3 +24,5 @@
 
 [rebase]
   autoStash = true
+[worktree]
+	useRelativePaths = true
