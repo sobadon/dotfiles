@@ -301,6 +301,10 @@ if [[ `uname -a` == *WSL2* ]]; then
     abbr --quiet code="'/mnt/c/Program Files/Microsoft VS Code/bin/code' ."
 fi
 
+if [[ "$REMOTE_CONTAINERS" == "true" ]]; then
+    abbr --quiet copilot-dev="copilot --allow-all --deny-tool \"shell(git push)\" --experimental"
+fi
+
 # Dev Container
 # devcontainer exec --remote-env "REMOTE_CONTAINERS=true" zsh
 DEVC_PROMPT_SEGMENT='%F{2}%Bdevc%b%f '
