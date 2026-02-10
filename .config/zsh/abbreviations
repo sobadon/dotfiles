@@ -1,3 +1,4 @@
+abbr "code"="'/mnt/c/Program Files/Microsoft VS Code/bin/code' ."
 abbr "exp"="/mnt/c/Windows/explorer.exe ."
 abbr "ga"="git add"
 abbr "gc"="git commit"
