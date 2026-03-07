@@ -218,6 +218,10 @@ if type aqua > /dev/null; then
   export AQUA_GLOBAL_CONFIG=${AQUA_GLOBAL_CONFIG:-}:${XDG_CONFIG_HOME:-$HOME/.config}/aquaproj-aqua/aqua.yaml
 fi
 
+if type mise > /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin

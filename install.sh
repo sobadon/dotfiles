@@ -26,6 +26,7 @@ ln -snf ${DOT_DIR}/.config/nvim ~/.config/nvim
 ln -snf ${DOT_DIR}/.config/systemd ~/.config/systemd
 ln -snf ${DOT_DIR}/.config/wezterm ~/.config/wezterm
 ln -snf ${DOT_DIR}/.config/zsh ~/.config/zsh
+ln -snf ${DOT_DIR}/.config/mise ~/.config/mise
 
 rm -rf ~/.tmux.conf
 ln -snf ${DOT_DIR}/.tmux.conf ~/.tmux.conf

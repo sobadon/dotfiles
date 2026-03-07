@@ -24,3 +24,4 @@
 !.config/nvim/**
 !.config/wezterm/wezterm.lua
 !.config/aquaproj-aqua/aqua.yaml
+!.config/msie/config.toml

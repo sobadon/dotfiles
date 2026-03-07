@@ -4,3 +4,6 @@
 *:Zone.Identifier
 *.crswap
 .sbdntemp
+
+# https://mise.jdx.dev/configuration.html#mise-toml
+mise.local.toml
