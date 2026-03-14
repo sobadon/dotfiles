@@ -306,7 +306,7 @@ if [[ `uname -a` == *WSL2* ]]; then
 fi
 
 if [[ "$REMOTE_CONTAINERS" == "true" ]]; then
-    abbr --quiet copilot-dev="copilot --allow-all --deny-tool \"shell(git push)\" --experimental"
+    abbr --quiet copilot-dev="copilot --allow-all --deny-tool \"shell(git push)\" --experimental --no-auto-update"
 fi
 
 # Dev Container
