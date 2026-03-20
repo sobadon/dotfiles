@@ -25,3 +25,4 @@
 !.config/wezterm/wezterm.lua
 !.config/aquaproj-aqua/aqua.yaml
 !.config/mise/config.toml
+!.config/mise/mise.lock
