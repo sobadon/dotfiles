@@ -18,8 +18,8 @@ if ! type aqua > /dev/null 2>&1; then
 fi
 
 if ! type mise > /dev/null 2>&1; then
-  curl -sSfL --output install-mise.sh https://github.com/jdx/mise/releases/download/v2026.3.9/install.sh
-  echo "56f59cf2e41d0120cc2a36caf3e4d68c2a420c2a03402901490a24ab32a1a594  install-mise.sh" | sha256sum -c -
+  curl -sSfL --output install-mise.sh https://github.com/jdx/mise/releases/download/v2026.3.10/install.sh
+  echo "c51bc4936e38ceee2fa608a6beccbd59fad1020c770eee7bcc02ed113548dd0c  install-mise.sh" | sha256sum -c -
   chmod +x install-mise.sh
   export MISE_QUIET=1
   ./install-mise.sh
