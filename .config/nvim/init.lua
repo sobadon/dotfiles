@@ -8,15 +8,20 @@ vim.opt.wrap = true
 -- vim.opt.cindent = true
 vim.opt.number = true
 
-vim.opt.termguicolors = true
--- Windows 側でクリップボードに入ったものは `p` でペーストできず、`i` で INSERT に入ってから Shift Ctrl V でペーストしなければならない
-vim.opt.clipboard = 'unnamedplus'
-
 vim.g.mapleader = ' '
 
 -- https://github.com/nvim-tree/nvim-tree.lua#setup
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+local is_remote_containers = vim.env.REMOTE_CONTAINERS == "true"
+if is_remote_containers then
+  return
+end
+
+vim.opt.termguicolors = true
+-- Windows 側でクリップボードに入ったものは `p` でペーストできず、`i` で INSERT に入ってから Shift Ctrl V でペーストしなければならない
+vim.opt.clipboard = 'unnamedplus'
 
 -- Windows Terminal などによって持っていかれるのでムリ
 -- vim.api.nvim_set_keymap('n', '<C-Tab>', ':bnext<CR>', { noremap = true, silent = true })
