@@ -14,9 +14,13 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
+    depth'1' ver'e1f9b7274f4df3d15c92d46c49f52ce58f947766' \
     zdharma-continuum/zinit-annex-as-monitor \
+    depth'1' ver'89739902eafacb3c9c389f896177fb25e8a95f38' \
     zdharma-continuum/zinit-annex-bin-gem-node \
+    depth'1' ver'ddb174be3aa308e7428691216f09aa69e8e2f94f' \
     zdharma-continuum/zinit-annex-patch-dl \
+    depth'1' ver'c747bf9c5a2b85347238fa433c0addcfc7745c6e' \
     zdharma-continuum/zinit-annex-rust
 ### End of Zinit's installer chunk
 
@@ -119,7 +123,7 @@ function tempdir() {
 }
 
 # completion
-zinit ice wait'!0'
+zinit ice wait'!0' depth'1' ver'0.36.0'
 zinit light zsh-users/zsh-completions
 
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -163,22 +167,27 @@ zle -N down-line-or-beginning-search
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+zinit ice depth'1' ver'v1.1.0'
 zinit load 'zsh-users/zsh-history-substring-search'
 zinit ice wait atload'_history_substring_search_config'
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 # theme
-zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh' depth'1' ver'v1.27.1'
 zinit light sindresorhus/pure
 # ときどき WSL2 の gpg-agent の SSH_AUTH_SOCK が固まる？のでやめる
 PURE_GIT_PULL=0
 PURE_PROMPT_SYMBOL=$
 
 # plugin
+zinit ice depth'1' ver'0.8.0-alpha1-pre-redrawhook'
 zinit light zsh-users/zsh-syntax-highlighting
+zinit ice depth'1' ver'v0.7.1'
 zinit light zsh-users/zsh-autosuggestions
+zinit ice depth'1' ver'v1.0'
 zinit light hlissner/zsh-autopair
+zinit ice depth'1' ver'v6.5.2'
 zinit light olets/zsh-abbr
 
 autoload -U +X bashcompinit && bashcompinit
