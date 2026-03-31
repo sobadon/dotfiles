@@ -13,3 +13,5 @@ neovim = "0.11.6"
 
 # tmux で plan 結果が遡れない？
 "npm:@github/copilot" = "1.0.3"
+
+"syft" = "1.42.3"

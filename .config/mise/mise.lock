@@ -129,6 +129,38 @@ url = "https://github.com/astral-sh/python-build-standalone/releases/download/20
 checksum = "sha256:2223000d2dcce0f50a8feddb8a8391ec6e5534f6f7169e10004a11ce9b438ed3"
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260320/cpython-3.14.3+20260320-x86_64-pc-windows-msvc-install_only_stripped.tar.gz"
 
+[[tools.syft]]
+version = "1.42.3"
+backend = "aqua:anchore/syft"
+
+[tools.syft."platforms.linux-arm64"]
+checksum = "sha256:dc630590c953347789d08f8ebf57c7d8094db89100785fcd94b1cddeac791804"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_linux_arm64.tar.gz"
+
+[tools.syft."platforms.linux-arm64-musl"]
+checksum = "sha256:dc630590c953347789d08f8ebf57c7d8094db89100785fcd94b1cddeac791804"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_linux_arm64.tar.gz"
+
+[tools.syft."platforms.linux-x64"]
+checksum = "sha256:0d6be741479eddd2c8644a288990c04f3df0d609bbc1599a005532a9dff63509"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_linux_amd64.tar.gz"
+
+[tools.syft."platforms.linux-x64-musl"]
+checksum = "sha256:0d6be741479eddd2c8644a288990c04f3df0d609bbc1599a005532a9dff63509"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_linux_amd64.tar.gz"
+
+[tools.syft."platforms.macos-arm64"]
+checksum = "sha256:d71ee7db2be0fe2e96f679fd9d69ef04274cc86c8604707797080a21070b3f32"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_darwin_arm64.tar.gz"
+
+[tools.syft."platforms.macos-x64"]
+checksum = "sha256:c00d01b7c43504708c8922d643d1cbaefa62ca8876baa4d2c2cf4c3be43707a9"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_darwin_amd64.tar.gz"
+
+[tools.syft."platforms.windows-x64"]
+checksum = "sha256:e1b9f4945aa64c2b34970bec617623d7f803d0661b48a50b966768b363322e2d"
+url = "https://github.com/anchore/syft/releases/download/v1.42.3/syft_1.42.3_windows_amd64.zip"
+
 [[tools.uv]]
 version = "0.10.10"
 backend = "aqua:astral-sh/uv"
