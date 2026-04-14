@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -eux
 
 if [ ! -S /tmp/.X11-unix/X0 ]; then

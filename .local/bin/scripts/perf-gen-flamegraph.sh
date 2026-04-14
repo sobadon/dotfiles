@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # カレントディレクトリにある *.data ファイルの最新を flamegraph に変換
 # sudo perf record -a -g -o perf-$(date +%Y%m%d-%H%M%S).data

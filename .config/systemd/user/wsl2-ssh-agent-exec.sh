@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # systemd user service によって起動されると環境変数 WSL_INTEROP が存在しない。
 # - https://github.com/microsoft/WSL/issues/8846

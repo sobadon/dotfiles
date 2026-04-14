@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # nomad-alloc-status-by-job.sh <job_id>
 
