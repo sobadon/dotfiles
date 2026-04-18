@@ -15,3 +15,4 @@ neovim = "0.11.6"
 "npm:@github/copilot" = "1.0.3"
 
 "syft" = "1.42.3"
+"gcloud" = "565.0.0"
