@@ -330,6 +330,26 @@ function __devc_precmd() {
 }
 precmd_functions+=(__devc_precmd)
 
+# mise --env <name> en で入った環境だけ表示する
+MISE_ENV_PROMPT_PREFIX=' %F{6}mise:'
+MISE_ENV_PROMPT_SUFFIX='%f '
+function __mise_env_precmd() {
+  if [[ -n "$MISE_ENV" ]]; then
+    local mise_prompt_segment="${MISE_ENV_PROMPT_PREFIX}${MISE_ENV}${MISE_ENV_PROMPT_SUFFIX}"
+    # pure の preprompt 行末に差し込む（$prompt_newline の前）
+    if [[ -n "${prompt_newline-}" && "$PROMPT" == *$prompt_newline* ]]; then
+      local preprompt="${PROMPT%%$prompt_newline*}"
+      local prompt_rest="${PROMPT#*$prompt_newline}"
+      if [[ "$preprompt" != *${mise_prompt_segment} ]]; then
+        PROMPT="${preprompt}${mise_prompt_segment}${prompt_newline}${prompt_rest}"
+      fi
+    elif [[ "$PROMPT" != *${mise_prompt_segment} ]]; then
+      PROMPT="${PROMPT}${mise_prompt_segment}"
+    fi
+  fi
+}
+precmd_functions+=(__mise_env_precmd)
+
 # profile end
 # type zprof > /dev/null 2>&1
 # if [ $? = 0 ]; then
