@@ -12,7 +12,7 @@ neovim = "0.11.6"
 "npm:@devcontainers/cli" = "0.84.1"
 
 # tmux で plan 結果が遡れない？
-"npm:@github/copilot" = "1.0.3"
+"npm:@github/copilot" = "1.0.36"
 
 "syft" = "1.42.3"
 "gcloud" = "565.0.0"
