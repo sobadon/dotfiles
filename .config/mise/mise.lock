@@ -90,6 +90,38 @@ backend = "npm:@devcontainers/cli"
 version = "1.0.36"
 backend = "npm:@github/copilot"
 
+[[tools.opencode]]
+version = "1.14.29"
+backend = "aqua:anomalyco/opencode"
+
+[tools.opencode."platforms.linux-arm64"]
+checksum = "sha256:faedc954ab549235a32f1bf10cb92206dbac58327a85530554e5e02feb28060e"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-arm64.tar.gz"
+
+[tools.opencode."platforms.linux-arm64-musl"]
+checksum = "sha256:faedc954ab549235a32f1bf10cb92206dbac58327a85530554e5e02feb28060e"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-arm64.tar.gz"
+
+[tools.opencode."platforms.linux-x64"]
+checksum = "sha256:d985e99d7e22446b78fc78a35cfa0ef8b0feff05be5288c4a0e1c6837b7a29f8"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-x64.tar.gz"
+
+[tools.opencode."platforms.linux-x64-musl"]
+checksum = "sha256:d985e99d7e22446b78fc78a35cfa0ef8b0feff05be5288c4a0e1c6837b7a29f8"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-linux-x64.tar.gz"
+
+[tools.opencode."platforms.macos-arm64"]
+checksum = "sha256:39c483fe12cffe07bfc050d59df534ca1b5d29d9232da237586f1b6a2ef1c7e1"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-darwin-arm64.zip"
+
+[tools.opencode."platforms.macos-x64"]
+checksum = "sha256:60d1c577998e5171183d55bf91e3bc699d5d91ab9998985d82240c87e2f30fec"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-darwin-x64.zip"
+
+[tools.opencode."platforms.windows-x64"]
+checksum = "sha256:87eb937a420708d2e424af2f8afaf3e4005ce0b95eb9d2e85be26c015d94591a"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.14.29/opencode-windows-x64.zip"
+
 [[tools.pipx]]
 version = "1.8.0"
 backend = "aqua:pypa/pipx"
