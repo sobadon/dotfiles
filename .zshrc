@@ -332,6 +332,10 @@ function __devc_precmd() {
 }
 precmd_functions+=(__devc_precmd)
 
+if [[ "$REMOTE_CONTAINERS" == "true" ]]; then
+  export EDITOR=nvim
+fi
+
 # mise --env <name> en で入った環境だけ表示する
 MISE_ENV_PROMPT_PREFIX=' %F{6}mise:'
 MISE_ENV_PROMPT_SUFFIX='%f '
