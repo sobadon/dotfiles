@@ -221,6 +221,8 @@ if [ -e ${ASDF_INIT_FILE} ]; then
   fpath=(${ASDF_DIR}/completions $fpath)
 fi
 
+# 2026-05-01 以降、aqua 自体の新規インストールは廃止
+# aqua.yaml から mise/config.toml に移行したら PATH も消す
 export PATH=${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH
 if type aqua > /dev/null; then
   export PATH="$(aqua root-dir)/bin:$PATH"
