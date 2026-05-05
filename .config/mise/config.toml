@@ -16,7 +16,7 @@ neovim = "0.11.6"
 
 "syft" = "1.42.3"
 "gcloud" = "565.0.0"
-"opencode" = "1.14.29"
+"opencode" = "1.14.35"
 "gh" = "2.92.0"
 
 "npm:microsandbox" = "0.4.4"
