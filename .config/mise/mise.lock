@@ -123,6 +123,10 @@ backend = "npm:@devcontainers/cli"
 version = "1.0.36"
 backend = "npm:@github/copilot"
 
+[[tools."npm:microsandbox"]]
+version = "0.4.4"
+backend = "npm:microsandbox"
+
 [[tools.opencode]]
 version = "1.14.29"
 backend = "aqua:anomalyco/opencode"
