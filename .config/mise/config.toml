@@ -7,6 +7,7 @@ python = "3.14"
 uv = "0.10.10"
 pipx = "1.8.0"
 neovim = "0.11.6"
+rg = "15.1.0"
 
 "pipx:git-filter-repo" = "2.47.0"
 "npm:@devcontainers/cli" = "0.84.1"
