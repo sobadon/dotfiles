@@ -17,7 +17,7 @@ rg = "15.1.0"
 
 "syft" = "1.42.3"
 "gcloud" = "565.0.0"
-"opencode" = "1.14.45"
+"opencode" = "1.15.1"
 "gh" = "2.92.0"
 
 "npm:microsandbox" = "0.4.4"
