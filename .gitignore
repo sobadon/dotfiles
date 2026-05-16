@@ -10,8 +10,6 @@
 !.zshrc
 !.vimrc
 !.ssh/rc
-!git/config
-!git/ignore
 !.config/systemd/**/*
 !abbreviations
 !small/.config/git
@@ -20,6 +18,8 @@
 !.digrc
 !README.md
 !.local/bin/scripts/**
+!.config/git/config
+!.config/git/ignore
 !.config/nvim/**
 !.config/wezterm/wezterm.lua
 !.config/mise/config.toml
