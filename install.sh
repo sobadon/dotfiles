@@ -9,8 +9,8 @@ if [ ! -d ~/.asdf ]; then
 fi
 
 if ! type mise > /dev/null 2>&1; then
-  curl -sSfL --output install-mise.sh https://github.com/jdx/mise/releases/download/v2026.3.10/install.sh
-  echo "c51bc4936e38ceee2fa608a6beccbd59fad1020c770eee7bcc02ed113548dd0c  install-mise.sh" | sha256sum -c -
+  curl -sSfL --output install-mise.sh https://github.com/jdx/mise/releases/download/v2026.5.10/install.sh
+  echo "cfeaedcdfc6e7208d3673e61fc8fa1aee9e6c1078b3cc758071663487b4b9fa4  install-mise.sh" | sha256sum -c -
   chmod +x install-mise.sh
   export MISE_QUIET=1
   ./install-mise.sh
