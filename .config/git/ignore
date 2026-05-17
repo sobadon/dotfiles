@@ -8,3 +8,6 @@
 # https://mise.jdx.dev/configuration.html#mise-toml
 mise.local.toml
 mise.*.local.toml
+
+# git worktree
+.wt
