@@ -12,12 +12,8 @@ rg = "15.1.0"
 "pipx:git-filter-repo" = "2.47.0"
 "npm:@devcontainers/cli" = "0.84.1"
 
-# tmux で plan 結果が遡れない？
-"npm:@github/copilot" = "1.0.36"
-
-"syft" = "1.42.3"
-"gcloud" = "565.0.0"
 "opencode" = "1.15.1"
 "gh" = "2.92.0"
 
-"npm:microsandbox" = "0.4.4"
+"npm:microsandbox" = "0.4.6"
+fnox = "1.25.1"
