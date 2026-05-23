@@ -192,6 +192,11 @@ zinit ice wait atload'_history_substring_search_config'
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
+if [[ -n "${MSB_HOSTNAME:-}" ]]; then
+  # msb であることを認識しやすくするため
+  export PROMPT_PURE_SSH_CONNECTION="${PROMPT_PURE_SSH_CONNECTION:-$MSB_HOSTNAME}"
+fi
+
 zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh' depth'1' ver'v1.27.1'
 zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL=$
