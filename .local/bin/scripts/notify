@@ -8,5 +8,10 @@ fi
 # 全ての引数を結合して1つのメッセージにする
 MESSAGE="$*"
 
-# OSC 9 のエスケープシーケンスを送信
-printf "\033]9;%s\007" "$MESSAGE"
+if [ -n "$TMUX" ]; then
+    #  DCSパススルーでラップして送信
+    printf "\033Ptmux;\033\033]9;%s\007\033\\" "$MESSAGE"
+else
+    # 通常環境: そのままOSC 9 のエスケープシーケンスを送信
+    printf "\033]9;%s\007" "$MESSAGE"
+fi
