@@ -15,5 +15,5 @@ rg = "15.1.0"
 "opencode" = "1.17.8"
 "gh" = "2.92.0"
 
-"npm:microsandbox" = "0.5.3"
+"npm:microsandbox" = "0.5.7"
 fnox = "1.25.1"
