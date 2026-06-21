@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: notify <message>" >&2
+    exit 1
+fi
+
+# 全ての引数を結合して1つのメッセージにする
+MESSAGE="$*"
+
+# OSC 9 のエスケープシーケンスを送信
+printf "\033]9;%s\007" "$MESSAGE"
