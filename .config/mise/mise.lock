@@ -151,36 +151,36 @@ version = "0.7.7"
 backend = "npm:microsandbox"
 
 [[tools.opencode]]
-version = "1.17.15"
+version = "1.18.35"
 backend = "aqua:anomalyco/opencode"
 
 [tools.opencode."platforms.linux-arm64"]
-checksum = "sha256:23aad358a8489cda9e9c46cde7ce87b2fc4847203ddb4d2179be34215ad6eeae"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-linux-arm64.tar.gz"
+checksum = "sha256:f7f2ba59ee8aa94d388f9696575a32d20e71c2ee48def9f80fc693a60fec6c72"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-arm64.tar.gz"
 
 [tools.opencode."platforms.linux-arm64-musl"]
-checksum = "sha256:ec753c4fcc2b5e2e6948f06c18c82c1160976a0cd85e7c6c7e911c35c82ebb5f"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-linux-arm64-musl.tar.gz"
+checksum = "sha256:4ab7ec5a86437fb3071bdc80dff2ecb426b608a8ebbd7227833690737997add3"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-arm64-musl.tar.gz"
 
 [tools.opencode."platforms.linux-x64"]
-checksum = "sha256:0e1353771192c7d2dc0c610d61ff70668bb8a4420dc4d9e35cfd33d7245f3e67"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-linux-x64.tar.gz"
+checksum = "sha256:c8f888b451f5494a18f858fffb0e0b68f4e4baa9c241761c5f206884f0fa640d"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-x64.tar.gz"
 
 [tools.opencode."platforms.linux-x64-musl"]
-checksum = "sha256:782c5d6fc3762fbdfaebcebc7457ed797acbab199969b3b237acfac195fd09d8"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-linux-x64-musl.tar.gz"
+checksum = "sha256:a3647ed1fbb1d52fbc47c02c31b6417fe0d6f0e639e27b095f47c269b60bfed5"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-linux-x64-musl.tar.gz"
 
 [tools.opencode."platforms.macos-arm64"]
-checksum = "sha256:9667289c143d1fbdd440055af4041bb432f44b07ddf0aef048a8c7f2f7c65e2d"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-darwin-arm64.zip"
+checksum = "sha256:80b05124357a77cd57945bfde36082a028e829c198d222d5e146617f49a2c4b7"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-darwin-arm64.zip"
 
 [tools.opencode."platforms.macos-x64"]
-checksum = "sha256:4bc40c124a1b419cfa922cadb3d68c2d67b2082276360b3ca36003aa350d9ad4"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-darwin-x64.zip"
+checksum = "sha256:8127d69e8e94d7adc496e910435f2f73856d87d456e988d3a947f250c95c1be2"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-darwin-x64.zip"
 
 [tools.opencode."platforms.windows-x64"]
-checksum = "sha256:4853d74160d639557db1ebde9d327c38fb95b1db0886afc18d9ef962459d84e2"
-url = "https://github.com/anomalyco/opencode/releases/download/v1.17.15/opencode-windows-x64.zip"
+checksum = "sha256:c90d248cca75e42fd15422a29b5f83a1b30c441af83565635d6b2682adc58dd1"
+url = "https://github.com/anomalyco/opencode/releases/download/v1.18.35/opencode-windows-x64.zip"
 
 [[tools.pipx]]
 version = "1.8.0"

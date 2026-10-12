@@ -11,9 +11,8 @@ neovim = "0.12.2"
 rg = "15.1.0"
 
 "pipx:git-filter-repo" = "2.47.0"
-"npm:@devcontainers/cli" = "0.84.1"
 
-"opencode" = "1.17.15"
+"opencode" = "1.18.35"
 "gh" = "2.92.0"
 
 "npm:microsandbox" = "0.7.7"
