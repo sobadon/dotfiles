@@ -361,6 +361,8 @@ function __mise_env_precmd() {
 }
 precmd_functions+=(__mise_env_precmd)
 
+alias opencodel='mkdir -p $(pwd)/.sbdn/opencode/ && OPENCODE_DB=$(pwd)/.sbdn/opencode/opencode.db opencode --standalone'
+
 # profile end
 # type zprof > /dev/null 2>&1
 # if [ $? = 0 ]; then
