@@ -361,7 +361,7 @@ function __mise_env_precmd() {
 }
 precmd_functions+=(__mise_env_precmd)
 
-alias opencodel='mkdir -p $(pwd)/.sbdn/opencode/ && OPENCODE_DB=$(pwd)/.sbdn/opencode/opencode.db opencode --standalone'
+alias opencodel='mkdir -p "$(pwd)/.sbdn/opencode" && { [[ -f "$(pwd)/.sbdn/opencode/opencode.db" ]] || cp "$HOME/.local/share/opencode/opencode.db" "$(pwd)/.sbdn/opencode/opencode.db"; } && OPENCODE_DB="$(pwd)/.sbdn/opencode/opencode.db" command opencode --standalone'
 
 # profile end
 # type zprof > /dev/null 2>&1
